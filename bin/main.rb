@@ -19,11 +19,25 @@ def display_board(board)
   )
 end
 
+chosen_moves = []
+
 game_piece = 'X'
 
-loop do
+still_playing = true
+
+while still_playing
   puts display_board(board)
   square_number = gets.chomp.to_i
   board[square_number - 1] = game_piece
   game_piece = game_piece == 'X' ? 'O' : 'X'
+
+  if (1..9).cover?(square_number)
+    if chosen_moves.include?(square_number)
+      puts "That is invalid, go again"
+      square_number = gets.chomp.to_i
+    else
+      chosen_moves.push(square_number)
+    end
+  end
+  !still_playing
 end
