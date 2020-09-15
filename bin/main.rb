@@ -33,7 +33,7 @@ while still_playing
 
   if (1..9).cover?(square_number)
     if chosen_moves.include?(square_number)
-      puts "That is invalid, go again"
+      puts 'That is invalid, go again'
       square_number = gets.chomp.to_i
     else
       chosen_moves.push(square_number)
