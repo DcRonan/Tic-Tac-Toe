@@ -8,7 +8,7 @@ player1 = gets.chomp
 puts "\nPlayer 2:"
 player2 = gets.chomp
 
-board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+board = ['', '', '', '', '', '', '', '', '']
 
 def display_board(board)
   %(#{board[0]} | #{board[1]} | #{board[2]}
@@ -25,19 +25,19 @@ game_piece = 'X'
 
 still_playing = true
 
+def pick_a_square(board)
+  loop do
+    square = gets.chomp.to_i - 1
+    if board[square] == '' && square.between?(0, 8) # if square is not a valid number: i.e is not in 1 - 9; occupied; 
+      return square
+    end
+    puts "Please choose a valid square"
+  end
+end
+
 while still_playing
   puts display_board(board)
-  square_number = gets.chomp.to_i
-  board[square_number - 1] = game_piece
-  game_piece = game_piece == 'X' ? 'O' : 'X'
-
-  if (1..9).cover?(square_number)
-    if chosen_moves.include?(square_number)
-      puts 'That is invalid, go again'
-      square_number = gets.chomp.to_i
-    else
-      chosen_moves.push(square_number)
-    end
-  end
-  !still_playing
+  square_number =  pick_a_square(board)
+  board[square_number] = game_piece
+  game_piece = game_piece == 'X' ? 'O' : 'X' 
 end
