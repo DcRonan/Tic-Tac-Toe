@@ -28,9 +28,7 @@ still_playing = true
 def pick_a_square(board)
   loop do
     square = gets.chomp.to_i - 1
-    if board[square] == '' && square.between?(0, 8) # if square is not a valid number: i.e is not in 1 - 9; occupied;
-      return square
-    end
+    return square if board[square] == '' && square.between?(0, 8)
 
     puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!'
   end
