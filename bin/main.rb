@@ -33,6 +33,7 @@ def pick_a_square(board)
   loop do
     square = gets.chomp.to_i - 1
     return square if board[square] == '' && square.between?(0, 8)
+
     # If the player hs selected an invalid or same number then we ask to select a correct number
     puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!'
   end
