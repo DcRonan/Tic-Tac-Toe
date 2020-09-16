@@ -19,8 +19,6 @@ def display_board(board)
   )
 end
 
-chosen_moves = []
-
 game_piece = 'X'
 
 still_playing = true
@@ -28,16 +26,17 @@ still_playing = true
 def pick_a_square(board)
   loop do
     square = gets.chomp.to_i - 1
-    if board[square] == '' && square.between?(0, 8) # if square is not a valid number: i.e is not in 1 - 9; occupied; 
+    if board[square] == '' && square.between?(0, 8) # if square is not a valid number: i.e is not in 1 - 9; occupied;
       return square
     end
-    puts "Please choose a valid square"
+
+    puts 'Please choose a valid square'
   end
 end
 
 while still_playing
   puts display_board(board)
-  square_number =  pick_a_square(board)
+  square_number = pick_a_square(board)
   board[square_number] = game_piece
-  game_piece = game_piece == 'X' ? 'O' : 'X' 
+  game_piece = game_piece == 'X' ? 'O' : 'X'
 end
