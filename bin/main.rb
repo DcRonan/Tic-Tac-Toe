@@ -77,6 +77,7 @@ class Game
       wining_status = @board.win_or_draw
       puts "Is there a winnier? #{wining_status}"
       @game_piece = @game_piece == 'X' ? 'O' : 'X'
+      return winning_status ? !still_playing? : still_playing?
     end
   end
 end
