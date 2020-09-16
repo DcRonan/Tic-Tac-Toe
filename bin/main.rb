@@ -4,22 +4,21 @@ puts 'WELCOME TO THIS TIC-TAC-TOE GAME: created by: '
 puts "Press 'ENTER' to begin"
 gets
 
+def get_player(default_name = 'Player 1')
+  player_name = gets.chomp
+  player_name.split.empty? ? default_name : player_name
+end
+
+def make_unique_name(name1, name2)
+  name2 += ' #2' if name2 == name1
+  name2
+end
+
 puts "\nPlayer 1:"
-player1 = gets.chomp
+player1 = get_player('Player 1')
 
 puts "\nPlayer 2:"
-player2 = gets.chomp
-
-def name
-  if player1.empty?
-    player1 = 'Bob'
-  elsif player2.empty?
-    player2 = 'Jill'
-  elsif player2 == player1
-    puts 'Please enter a new name as it has already been selected!'
-    player2 = gets.chomp
-  end 
-end  
+player2 = make_unique_name(player1, get_player('Player 2'))
 
 puts 'Please choose a number between 1-9 to select your place!'
 
