@@ -12,14 +12,14 @@ puts 'Please choose a number between 1-9 to select your place!'
 
 class Board
   def initialize
-    @board = ['', '', '', '', '', '', '', '', '']
+    @board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     @selected_moves = []
   end
 
   def pick_a_square
     loop do
-      @square = gets.chomp.to_i - 1
-      return @square if @board[@square] == '' && @square.between?(0, 8)
+      square = gets.chomp.to_i - 1
+      return square if !@selected_moves.include?(square) && square.between?(0, 8)
 
       yield()
     end
@@ -42,15 +42,17 @@ class Board
 
   def win_or_draw
     winning_numbers = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-    @status = nil
+    status = nil
     winning_numbers.each do |n|
-      if @board[n[0]] == @board[n[1]] && @board[n[1]] == @board[n[2]]
-        @status = @board[n[0]]
+      if !@board[n[0]].nil? && @board[n[0]] == @board[n[1]] && @board[n[1]] == @board[n[2]]
+        status = @board[n[0]]
         break
       end
     end
 
-    @status
+    status = 'TIE' if status.nil? && @selected_moves.length == 9
+
+    status
   end
 end
 
@@ -58,26 +60,30 @@ class Game
   def initialize(board, player1, player2)
     @game_piece = 'X'
     @board = board
-    @player1 = player1
-    @player2 = player2
-  end
-
-  def still_playing?
-    true
+    @players = { 'X' => player1, 'O' => player2 }
+    @still_playing = true
   end
 
   def game_loop
-    while still_playing?
-      puts @game_piece == 'X' ? "#{@player1}'s take your turn!" : "#{@player2} take your turn!"
+    while @still_playing
+      puts "#{@players[@game_piece]}'s take your turn!"
       puts @board.display
+      puts 'Select a Square:'
       square_number = @board.pick_a_square do
         puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!'
       end
       @board.set_a_square(square_number, @game_piece)
-      wining_status = @board.win_or_draw
-      puts "Is there a winnier? #{wining_status}"
       @game_piece = @game_piece == 'X' ? 'O' : 'X'
-      return winning_status ? !still_playing? : still_playing?
+      wining_status = @board.win_or_draw
+      break if %w[X O TIE].include?(wining_status)
+    end
+
+    puts @board.display
+    winner = @players[wining_status]
+    if winner
+      puts "#{winner} wins this round."
+    else
+      puts "It's a TIE"
     end
   end
 end
