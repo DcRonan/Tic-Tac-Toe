@@ -13,6 +13,7 @@ puts 'Please choose a number between 1-9 to select your place!'
 class Board
   def initialize
     @board = ['', '', '', '', '', '', '', '', '']
+    @selected_moves = []
   end
 
   def pick_a_square
@@ -26,6 +27,7 @@ class Board
 
   def set_a_square(idx, game_piece)
     @board[idx] = game_piece
+    @selected_moves.push(idx)
   end
 
   def display
@@ -36,6 +38,22 @@ class Board
   ----------
   #{@board[6]} | #{@board[7]} | #{@board[8]}
     )
+  end
+
+  # create var for winning conditions
+  # push players number options to a new a array
+  # loop through winning_numbers array and see if (n, n+1, n+2) == from the winning_numbers array
+  def win_or_draw
+    winning_numbers = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+    @status = nil
+    win = winning_numbers.each do |win|
+      if @board[win[0]] == @board[win[1]] && @board[win[1]] == @board[win[2]]
+        @status = @board[win[0]]
+        break
+      end
+    end
+
+    win
   end
 end
 
@@ -59,6 +77,8 @@ class Game
         puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!'
       end
       @board.set_a_square(square_number, @game_piece)
+      wining_status = @board.win_or_draw
+      puts "Is there a winnier? #{wining_status}"
       @game_piece = @game_piece == 'X' ? 'O' : 'X'
     end
   end
