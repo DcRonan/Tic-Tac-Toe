@@ -40,20 +40,17 @@ class Board
     )
   end
 
-  # create var for winning conditions
-  # push players number options to a new a array
-  # loop through winning_numbers array and see if (n, n+1, n+2) == from the winning_numbers array
   def win_or_draw
     winning_numbers = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
     @status = nil
-    win = winning_numbers.each do |n|
+    winning_numbers.each do |n|
       if @board[n[0]] == @board[n[1]] && @board[n[1]] == @board[n[2]]
         @status = @board[n[0]]
         break
       end
     end
 
-    win
+    @status
   end
 end
 
