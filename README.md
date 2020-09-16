@@ -13,19 +13,14 @@
 ## Description
 > Write about the project...
 
-![screenshot](./src/assets/images/screenshot.svg)
-
 Additional description about the project and its features...
 
 ## Built With
 ```
 - Ruby 2.7
 - VS Code
-- Font Awesome Icons
+- Rubocop 0.81.0
 ```
-
-![img](./src/assets/svg/html-5.svg) ![img](./src/assets/svg/css-3.svg)
-![img](./src/assets/svg/v-s-code.svg) ![img](./src/assets/svg/fontawesome.svg)
 
 ## Live Demo
 
