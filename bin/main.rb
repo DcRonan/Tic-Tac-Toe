@@ -10,6 +10,17 @@ player1 = gets.chomp
 puts "\nPlayer 2:"
 player2 = gets.chomp
 
+def name
+  if player1.empty?
+    player1 = 'Bob'
+  elsif player2.empty?
+    player2 = 'Jill'
+  elsif player2 == player1
+    puts 'Please enter a new name as it has already been selected!'
+    player2 = gets.chomp
+  end 
+end  
+
 puts 'Please choose a number between 1-9 to select your place!'
 
 class Game
