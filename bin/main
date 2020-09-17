@@ -6,7 +6,7 @@ require_relative '../lib/player'
 
 def game_loop(game)
   while game.still_playing
-    puts "#{game.current_player}'s take your turn!"
+    puts "#{game.current_player} take your turn!"
     puts game.board.display
     puts 'Select a Square:'
     square_number = get_valid_square(game)
@@ -21,17 +21,11 @@ end
 def game_conclude(game, wining_status)
   puts game.board.display
   winner = game.players[wining_status]
-  if winner
-    puts "#{winner} wins this round."
-  else
-    puts "It's a TIE"
-  end
+  puts winner ? "#{winner} wins this round." : "It's a TIE"
 end
 
 def get_valid_square(game)
-  game.board.pick_a_square do
-    puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!'
-  end
+  game.board.pick_a_square { puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!' }
 end
 
 puts 'WELCOME TO THIS TIC-TAC-TOE GAME: created by: Daniel & Bello.'
