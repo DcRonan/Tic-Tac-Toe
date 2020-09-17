@@ -1,4 +1,4 @@
-# Project Name
+# OOP (Object Oriented Programming) - Tic Tac Toe
 ![Microverse](https://img.shields.io/badge/-Microverse-6F23FF?style=for-the-badge)
 ## Library Directory
  
@@ -11,9 +11,27 @@
 | [License](#license) | 
 
 ## Description
-> Write about the project...
+> In this project we created a playable Tic Tac Toe game. For a live demo, please follow the link below.
 
-Additional description about the project and its features...
+![gif](https://media.giphy.com/media/Yj97rLWiH29Hi/source.gif)
+
+## Game Instructions
+
+**Tic Tac Toe** is a game that involves having 2 players against one another and to win you will need to either get your nought **O** or cross **X** in a line of 3.
+
+### Steps
+
+```
+1. Open the command prompt and to the Tic Tac Toe main directory
+2. Run 'ruby bin/main'
+3. Click 'Enter' to start
+4. Player 1 enter your name(The first player will be 'X')
+5. Player 2 enter your name
+6. To take your first move, enter a number between 1-9(1 being the top left and 3 being the top right, 4 being the middle left and 6 being the middle right)
+7. If a player has chose and invalid number or an already chosen number, it will ask you to enter a valid number
+8. When a player has completed a consecutive 3 line of 'X' or 'O', it wil prompt that player that he or she is the winner
+9. If no one is a winner, it will prompt that it is a draw!
+```
 
 ## Built With
 ```
@@ -26,20 +44,24 @@ Additional description about the project and its features...
 
 #### Click on the button below..
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world)
+[![Run on Repl.it](https://repl.it/badge/github/DcRonan/Tic-Tac-Toe)](https://repl.it/github/DcRonan/Tic-Tac-Toe)
 
-## Run Tests
+## Getting Started
 
 ### Install
+**To get this working on your local computer, follow the steps below!**
+
 ```
-Download code
+1. Install Ruby
+2. Open the Terminal
+3. Download code by entering 'git clone git@github.com:DcRonan/Tic-Tac-Toe.git' in the terminal
 ```
 ### Run
 ```
 1. Open text editor
 2. Open command prompt
-3. Enter directory of 'main.rb'
-4. Type 'ruby main.rb'
+3. Enter directory of 'main'
+4. Type 'ruby main'
 ```
 
 
@@ -53,10 +75,10 @@ Download code
 
 ### 👨‍💻 - Bello Babakolo
 
-[![GitHub](https://img.shields.io/badge/-GitHub-000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/DcRonan) <br>
-[![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/danronan10/) <br>
-[![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:danielconnorronan@gmail.com) <br>
-[![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/dc_ronan)
+[![GitHub](https://img.shields.io/badge/-GitHub-000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/belsman) <br>
+[![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/bello-babakolo-b23b17145) <br>
+[![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:fleetbeekay@gmail.com) <br>
+[![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/d_belsman)
 
 ### 🤝 Contributing
 
