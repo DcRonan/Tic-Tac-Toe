@@ -5,7 +5,7 @@ require_relative '../lib/game'
 require_relative '../lib/player'
 
 def game_loop(game)
-  while game.still_playing
+  while true
     puts "#{game.current_player} take your turn!"
     puts game.board.display
     puts 'Select a Square:'
