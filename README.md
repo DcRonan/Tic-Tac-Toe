@@ -56,15 +56,15 @@ If you prefer to get quicker access to the game, then please click the button on
 ```
 1. Install Ruby
 2. Open the Terminal
-3. Run 'bundle install'
-4. Download code by entering 'git clone git@github.com:DcRonan/Tic-Tac-Toe.git' in the terminal
+3. Download code by entering 'git clone https://github.com/DcRonan/Tic-Tac-Toe.git' in the terminal
+4. Run 'cd Tic-Tac-Toe' to enter the main directory
+4. Run 'bundle install'
 ```
 ### Run
 ```
-1. Open text editor
-2. Open command prompt
-3. Enter directory of 'main'
-4. Type 'ruby main'
+1. Open terminal
+2. Run 'cd Tic-Tac-Toe' to enter main directory
+3. Run 'cd bin/main' to start the game
 ```
 
 
