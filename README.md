@@ -19,6 +19,8 @@
 
 **Tic Tac Toe** is a game that involves having 2 players against one another and to win you will need to either get your nought **O** or cross **X** in a line of 3.
 
+If you prefer to get quicker access to the game, then please click the button on the 'Live Demo' section!
+
 ### Steps
 
 ```
