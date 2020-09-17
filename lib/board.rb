@@ -4,11 +4,9 @@ class Board
     @selected_moves = []
   end
 
-  def pick_a_square
+  def pick_a_square(square)
     loop do
-      square = gets.chomp.to_i - 1
       return square if !@selected_moves.include?(square) && square.between?(0, 8)
-
       yield()
     end
   end

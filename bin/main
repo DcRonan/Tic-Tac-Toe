@@ -25,7 +25,8 @@ def game_conclude(game, wining_status)
 end
 
 def get_valid_square(game)
-  game.board.pick_a_square { puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!' }
+  square = gets.chomp.to_i - 1
+  game.board.pick_a_square(square) { puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!' }
 end
 
 puts 'WELCOME TO THIS TIC-TAC-TOE GAME: created by: Daniel & Bello.'
