@@ -7,6 +7,7 @@ class Board
   def pick_a_square(square)
     loop do
       return square if !@selected_moves.include?(square) && square.between?(0, 8)
+
       yield()
     end
   end
