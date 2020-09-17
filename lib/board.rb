@@ -4,12 +4,8 @@ class Board
     @selected_moves = []
   end
 
-  def pick_a_square(square)
-    loop do
-      return square if !@selected_moves.include?(square) && square.between?(0, 8)
-
-      yield()
-    end
+  def valid_square?(square)
+    return square if !@selected_moves.include?(square) && square.between?(0, 8)
   end
 
   def set_a_square(idx, game_piece)

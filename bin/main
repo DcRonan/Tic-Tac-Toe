@@ -5,7 +5,7 @@ require_relative '../lib/game'
 require_relative '../lib/player'
 
 def game_loop(game)
-  while true
+  while game.still_playing
     puts "#{game.current_player} take your turn!"
     puts game.board.display
     puts 'Select a Square:'
@@ -25,9 +25,11 @@ def game_conclude(game, wining_status)
 end
 
 def get_valid_square(game)
-  square = gets.chomp.to_i - 1
-  game.board.pick_a_square(square) do
-    puts 'Please choose a valid square, choose between 1-9 and that hasn\'t been selected!'
+  loop do
+    square = gets.chomp.to_i - 1
+    return square if game.board.valid_square?(square)
+
+    puts 'Select a valid square: valid squares (1-9)'
   end
 end
 
