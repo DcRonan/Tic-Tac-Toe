@@ -2,7 +2,6 @@
 
 require_relative '../lib/board'
 require_relative '../lib/game'
-require_relative '../lib/player'
 
 def game_loop(game)
   while game.still_playing
