@@ -31,7 +31,7 @@ If you prefer to get quicker access to the game, then please click the button on
 5. Player 2 enter your name
 6. To take your first move, enter a number between 1-9(1 being the top left and 3 being the top right, 4 being the middle left and 6 being the middle right)
 7. If a player has chose and invalid number or an already chosen number, it will ask you to enter a valid number
-8. When a player has completed a consecutive 3 line of 'X' or 'O', it wil prompt that player that he or she is the winner
+8. When a player has completed a consecutive 3 line of 'X' or 'O', it will prompt that player that he or she is the winner
 9. If no one is a winner, it will prompt that it is a draw!
 ```
 
@@ -56,7 +56,8 @@ If you prefer to get quicker access to the game, then please click the button on
 ```
 1. Install Ruby
 2. Open the Terminal
-3. Download code by entering 'git clone git@github.com:DcRonan/Tic-Tac-Toe.git' in the terminal
+3. Run 'bundle install'
+4. Download code by entering 'git clone git@github.com:DcRonan/Tic-Tac-Toe.git' in the terminal
 ```
 ### Run
 ```
