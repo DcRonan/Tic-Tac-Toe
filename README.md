@@ -64,7 +64,8 @@ If you prefer to get quicker access to the game, then please click the button on
 ```
 1. Open terminal
 2. Run 'cd Tic-Tac-Toe' to enter main directory
-3. Run 'cd bin/main' to start the game
+3. Run 'cd bin/main' to enter file directory
+4. Run 'ruby main' to start the game
 ```
 
 
