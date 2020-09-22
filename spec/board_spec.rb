@@ -24,4 +24,14 @@ describe Board do
       expect(board.set_a_square(4, symbol)).not_to eq([5])
     end
   end
+
+  describe '#win_or_draw' do
+    it 'Checks if the game is not a Tie' do
+      expect(board.win_or_draw).not_to eq('TIE')
+    end
+
+    it 'Checks if the game has a winner' do
+      expect(board.win_or_draw).to eq(' ')
+    end
+  end
 end
