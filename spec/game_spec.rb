@@ -5,7 +5,7 @@ describe Game do
 
   describe '#initialize' do
     it 'Checks if the given player names are correct' do
-      expect(game.players).to eq("O"=>"Ronan", "X"=>"Daniel")
+      expect(game.players).to eq('O' => 'Ronan', 'X' => 'Daniel')
     end
 
     it 'Checks if the game is still running' do
