@@ -68,6 +68,7 @@ If you prefer to get quicker access to the game, then please click the button on
 4. Run 'ruby main' to start the game
 ```
 
+### Tests
 
 ## Authors
 
