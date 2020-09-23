@@ -68,7 +68,21 @@ If you prefer to get quicker access to the game, then please click the button on
 4. Run 'ruby main' to start the game
 ```
 
-### Tests
+## Tests
+
+### Install
+```
+1. Open a terminal
+2. Run 'gem install rspec'
+3. Run 'cd Tic-Tac-Toe'
+4. Run rspec --init’ to install rspec in directory
+```
+
+### Run
+```
+1. Run 'rspec' in the terminal
+2. In the terminal, you should see if the tests pass or fail like so:
+```
 
 ## Authors
 
