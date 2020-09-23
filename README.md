@@ -84,6 +84,8 @@ If you prefer to get quicker access to the game, then please click the button on
 2. In the terminal, you should see if the tests pass or fail like so:
 ```
 
+![img](./assets/passed-sc.png)
+
 ## Authors
 
 ### 👨‍💻 Daniel Ronan
