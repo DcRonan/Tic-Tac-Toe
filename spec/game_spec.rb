@@ -8,12 +8,12 @@ describe Game do
       expect(game.players).to eq('O' => 'Ronan', 'X' => 'Daniel')
     end
 
-    it 'Checks if the game is still running' do
-      expect(game.still_playing).to be true
+    it 'Checks if the given player names are correct' do
+      expect(game.players).not_to eq('X' => 'John', 'O' => 'Smith')
     end
 
     it 'Checks if the game is still running' do
-      expect(game.still_playing).not_to be false
+      expect(game.still_playing).to be true
     end
 
     it 'Checks if the board contains the given array' do
