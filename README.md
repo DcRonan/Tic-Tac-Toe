@@ -11,7 +11,7 @@
 | [License](#license) | 
 
 ## Description
-> In this project we created a playable Tic Tac Toe game. For a live demo, please follow the link below.
+> In this project, we created a playable Tic Tac Toe game. For a live demo, please follow the link below.
 
 ![gif](https://media.giphy.com/media/Yj97rLWiH29Hi/source.gif)
 
@@ -19,7 +19,7 @@
 
 **Tic Tac Toe** is a game that involves having 2 players against one another and to win you will need to either get your nought **O** or cross **X** in a line of 3.
 
-If you prefer to get quicker access to the game, then please click the button on the 'Live Demo' section!
+If you prefer to get quick access to the game, then please click the button on the 'Live Demo' section!
 
 ### Steps
 
@@ -30,7 +30,7 @@ If you prefer to get quicker access to the game, then please click the button on
 4. Player 1 enter your name(The first player will be 'X')
 5. Player 2 enter your name
 6. To take your first move, enter a number between 1-9(1 being the top left and 3 being the top right, 4 being the middle left and 6 being the middle right)
-7. If a player has chose and invalid number or an already chosen number, it will ask you to enter a valid number
+7. If a player has chosen an invalid number or an already chosen number, it will ask you to enter a valid number
 8. When a player has completed a consecutive 3 line of 'X' or 'O', it will prompt that player that he or she is the winner
 9. If no one is a winner, it will prompt that it is a draw!
 ```
@@ -62,8 +62,8 @@ If you prefer to get quicker access to the game, then please click the button on
 ```
 ### Run
 ```
-1. Open terminal
-2. Run 'cd Tic-Tac-Toe' to enter main directory
+1. Open the terminal
+2. Run 'cd Tic-Tac-Toe' to enter the main directory
 3. Run 'cd bin/' to enter file directory
 4. Run 'ruby main' to start the game
 ```
@@ -75,7 +75,7 @@ If you prefer to get quicker access to the game, then please click the button on
 1. Open a terminal
 2. Run 'gem install rspec'
 3. Run 'cd Tic-Tac-Toe'
-4. Run rspec --init’ to install rspec in directory
+4. Run rspec --init’ to install rspec in the directory
 ```
 
 ### Run
@@ -105,7 +105,7 @@ If you prefer to get quicker access to the game, then please click the button on
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](enter issues url here).
+Feel free to check the [issues page](https://github.com/DcRonan/Tic-Tac-Toe/issues).
 
 ### Show your support
 
